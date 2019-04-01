@@ -2,7 +2,7 @@
 
 ![image](https://github.com/olinations/crud-starter-frontend-hooks/blob/master/template.png)
 
-This is a converted version of the [Crud Starter Frontend](https://github.com/olinations/crud-starter-frontend) that goes from using React Component classes to functional componenents that use hooks. Specific changes include implementation of useState() to replace constructor functions and state declarations and useEffect() to replace componentDidMount() and componentDidUpdate().
+This is a converted version of the [Crud Starter Frontend](https://github.com/olinations/crud-starter-frontend). It goes from using React Component classes to functional componenents with hooks. Specific changes include the implementation of useState() to replace constructor functions and state declarations and useEffect() to replace componentDidMount() and componentDidUpdate().
 
 This React frontend goes alone with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be easily edited and used as a starter for any app that features get, post, put and delete requests or other API calls.
 
