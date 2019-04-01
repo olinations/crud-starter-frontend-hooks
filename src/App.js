@@ -1,51 +1,40 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import ModalForm from './Components/Modals/Modal'
 import DataTable from './Components/Tables/DataTable'
 import { CSVLink } from "react-csv"
 
-class App extends Component {
-  state = {
-    items: []
-  }
+function App(props) {
 
-  getItems(){
+  const [items, setItems] = useState([])
+
+  const getItems= () => {
     fetch('http://localhost:3000/crud')
       .then(response => response.json())
-      .then(items => this.setState({items}))
+      .then(items => setItems(items))
       .catch(err => console.log(err))
   }
 
-  addItemToState = (item) => {
-    this.setState(prevState => ({
-      items: [...prevState.items, item]
-    }))
+  const addItemToState = (item) => {
+    setItems([...items, item])
   }
 
-  updateState = (item) => {
-    const itemIndex = this.state.items.findIndex(data => data.id === item.id)
-    const newArray = [
-    // destructure all items from beginning to the indexed item
-      ...this.state.items.slice(0, itemIndex),
-    // add the updated item to the array
-      item,
-    // add the rest of the items to the array from the index after the replaced item
-      ...this.state.items.slice(itemIndex + 1)
-    ]
-    this.setState({ items: newArray })
+  const updateState = (item) => {
+    const itemIndex = items.findIndex(data => data.id === item.id)
+    const newArray = [...items.slice(0, itemIndex), item, ...items.slice(itemIndex + 1)]
+    setItems(newArray)
   }
 
-  deleteItemFromState = (id) => {
-    const updatedItems = this.state.items.filter(item => item.id !== id)
-    this.setState({ items: updatedItems })
+  const deleteItemFromState = (id) => {
+    const updatedItems = items.filter(item => item.id !== id)
+    setItems(updatedItems)
   }
 
-  componentDidMount(){
-    this.getItems()
-  }
+  useEffect(() => {
+    getItems()
+  }, []);
 
-  render() {
-    return (
+  return (
       <Container className="App">
         <Row>
           <Col>
@@ -54,7 +43,7 @@ class App extends Component {
         </Row>
         <Row>
           <Col>
-            <DataTable items={this.state.items} updateState={this.updateState} deleteItemFromState={this.deleteItemFromState} />
+            <DataTable items={items} updateState={updateState} deleteItemFromState={deleteItemFromState} />
           </Col>
         </Row>
         <Row>
@@ -64,15 +53,14 @@ class App extends Component {
               color="primary"
               style={{float: "left", marginRight: "10px"}}
               className="btn btn-primary"
-              data={this.state.items}>
+              data={items}>
               Download CSV
             </CSVLink>
-            <ModalForm buttonLabel="Add Item" addItemToState={this.addItemToState}/>
+            <ModalForm buttonLabel="Add Item" addItemToState={addItemToState}/>
           </Col>
         </Row>
       </Container>
-    )
-  }
+  )
 }
 
 export default App
