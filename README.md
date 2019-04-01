@@ -4,7 +4,7 @@
 
 This is a converted version of the [Crud Starter Frontend](https://github.com/olinations/crud-starter-frontend). It goes from using React Component classes to functional componenents with hooks. Specific changes include the implementation of useState() to replace constructor functions and state declarations and useEffect() to replace componentDidMount() and componentDidUpdate().
 
-**CRUD Stareter Frontend with Hooks** plays nicely with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be easily edited and used as a starter frontend for any app that features get, post, put and delete requests or other API calls.
+**CRUD Starter Frontend with Hooks** plays nicely with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be easily edited and used as a starter frontend for any app that features get, post, put and delete requests or other API calls.
 
 This frontend CRUD app uses Bootstrap styles with reactstrap (a Bootstrap component plugin) to create a responsive data table that displays all data from a table in a database. It has a Modal component with a form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
 
