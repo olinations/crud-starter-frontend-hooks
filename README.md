@@ -1,10 +1,12 @@
-# CRUD Starter Frontend
+# CRUD Starter Frontend with Hooks
 
-![image](https://github.com/olinations/crud-starter-frontend/blob/master/template.png)
+![image](https://github.com/olinations/crud-starter-frontend-hooks/blob/master/template.png)
 
-This is the React frontend that goes with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be used as a starter for any app that features get, post, put and delete requests.
+This is a converted version of the [Crud Starter Frontend](https://github.com/olinations/crud-starter-frontend) that goes from using React Component classes to functional componenents that use hooks. Specific changes include implementation of useState() to replace contructor states and useEffect() to replace componentDidMount() and componentDidUpdate().
 
-It uses Bootstrap styles and reactstrap, which creates Bootstrap components, to create a responsive data table that displays all data from a table in a database. It has a modal form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
+This React frontend goes alone with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be easily edited and used as a starter for any app that features get, post, put and delete requests or other API calls.
+
+This frontend CRUD app uses Bootstrap styles with reactstrap, a Bootstrap component plugin, to create a responsive data table that displays all data from a table in a database. It has a Modal component with a form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
 
 It uses react-csv to create the CSV download button.
 
@@ -13,7 +15,7 @@ It uses react-csv to create the CSV download button.
 **1. Clone this repo**
 
 ```
-git clone https://github.com/olinations/crud-starter-frontend.git
+git clone https://github.com/olinations/crud-starter-frontend-hooks.git
 ```
 
 **2. NPM install React and dependencies**
@@ -24,4 +26,4 @@ npm install
 
 ## Notes
 
-For full details on every piece of code in this CRUD Starter Frontend visit the companion [Medium article here](https://medium.com/@olinations/build-a-crud-template-using-react-bootstrap-express-postgres-9f84cc444438?source=friends_link&sk=51028bf98ff92bc659d3edbb539a82bb).
+Read about the changes made from the frontend that uses Component classes to this one that uses hooks at [Brain Bank](https://brainbank.cc/jamie/lessons/programming-react/react-classes-to-hooks).
