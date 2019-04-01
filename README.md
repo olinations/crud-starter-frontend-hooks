@@ -26,4 +26,4 @@ npm install
 
 ## Notes
 
-Read about the changes made from the frontend that uses Component classes to this one that uses hooks at [Brain Bank](https://brainbank.cc/jamie/lessons/programming-react/react-classes-to-hooks).
+Read about the changes made from the frontend that uses Component classes to this one that uses hooks in [this Medium post](https://medium.com/@olinations/10-steps-to-convert-a-react-class-component-to-a-functional-component-with-hooks-ab198e0fa139?source=friends_link&sk=c9c23dd964348d89a1269eb919c878ec).
