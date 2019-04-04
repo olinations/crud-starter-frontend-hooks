@@ -27,5 +27,3 @@ npm install
 ## Notes
 
 Read about the changes made from the frontend that uses Component classes to this one that uses hooks [here](https://medium.com/@olinations/10-steps-to-convert-a-react-class-component-to-a-functional-component-with-hooks-ab198e0fa139?source=friends_link&sk=c9c23dd964348d89a1269eb919c878ec).
-
-Next we will be working on React Native implementations.
